@@ -45,7 +45,7 @@ cat1.products.create!({
   
   As a defense mechanism the Giant Tea grow slippery leaves to prevent insects from easily eaten them.
   They rely on animal pollination to reproduce. To promote pollination, they produce aromatic scents.",
-  image: open_asset('plante_1.jpg'),
+  image: open_asset('plante_1.png'),
   quantity: 0,
   price: 64.99
 })
@@ -61,7 +61,7 @@ They can be eaten to relief a sore throat.
 
 As a defense mechanism the Scented Blade can collapse its flowers when it detects vibrations.
 They rely on animal pollination to reproduce. Once pollinated, they grow fairly large, delicious nuts.",
-  image: open_asset('plante_2.jpg'),
+  image: open_asset('plante_2.png'),
   quantity: 18,
   price: 24.99
 })
@@ -76,7 +76,7 @@ cat1.products.create!({
   
   As a defense mechanism the Lion Grapevine grows small thorns.
   They rely on wind pollination to reproduce. Once pollinated, they grow small, inedible fruits.",
-  image: open_asset('plante_3.jpg'),
+  image: open_asset('plante_3.png'),
   quantity: 4,
   price: 34.49
 })
@@ -91,7 +91,7 @@ cat1.products.create!({
   
   As a defense mechanism the Bone Coneflower is poisonous for most creatures.
   They rely on self pollination to reproduce. Once pollinated, they grow fairly large, inedible fruits.",
-  image: open_asset('plante_4.jpg'),
+  image: open_asset('plante_4.png'),
   quantity: 8,
   price: 24.99
 })
@@ -106,7 +106,7 @@ cat1.products.create!({
   
   As a defense mechanism the Enirthelda produces a thick, sticky wax.
   They rely on wind pollination to reproduce. Once pollinated, they grow fairly large, inedible nuts.",
-  image: open_asset('plante_5.jpg'),
+  image: open_asset('plante_5.png'),
   quantity: 8,
   price: 124.99
 })
@@ -121,7 +121,7 @@ cat1.products.create!({
   
   As a defense mechanism the Swamp Root taste extremely sour.
   They rely on animal pollination to reproduce. To promote pollination, they produce a delicious nectar.",
-  image: open_asset('plante_6.jpg'),
+  image: open_asset('plante_6.png'),
   quantity: 82,
   price: 24.49
 })
@@ -137,7 +137,7 @@ cat2.products.create!({
   
   As a defense mechanism the Sweet Hop relies mostly on its surroundings to survive.
   They rely on self pollination to reproduce. Once pollinated, they grow fairly large, delicious nuts.",
-  image: open_asset('plante_7.jpg'),
+  image: open_asset('plante_7.png'),
   quantity: 40,
   price: 64.49
 })
@@ -152,7 +152,7 @@ cat2.products.create!({
   
   As a defense mechanism the Tangle Azolla grow slippery leaves to prevent insects from easily eaten them.
   They rely on self pollination to reproduce. Once pollinated, they grow delicious, small fruits.",
-  image: open_asset('plante_8.jpg'),
+  image: open_asset('plante_8.png'),
   quantity: 3,
   price: 24.99
 })
@@ -167,7 +167,7 @@ cat2.products.create!({
   
   As a defense mechanism the Krapliper produces a thick, sticky wax.
   They rely on self pollination to reproduce. Once pollinated, they grow fairly large, inedible fruits.",
-  image: open_asset('plante_9.jpg'),
+  image: open_asset('plante_9.png'),
   quantity: 32,
   price: 1999.99
 })
@@ -182,7 +182,7 @@ cat3.products.create!({
   
   As a defense mechanism the Eesrorn has a thick, wooden stem.
   They rely on water currents to carry their seeds away to reproduce. Once pollinated, they grow fairly large, inedible fruits.",
-  image: open_asset('plante_10.jpg'),
+  image: open_asset('plante_10.png'),
   quantity: 320,
   price: 39.99
 })
@@ -197,7 +197,7 @@ cat3.products.create!({
   
   As a defense mechanism the Void Fennel has a thick, wooden stem.
   They rely on water currents to carry their seeds away to reproduce. Once pollinated, they grow fairly large, inedible fruits.",
-  image: open_asset('plante_11.jpg'),
+  image: open_asset('plante_11.png'),
   quantity: 2,
   price: 87.65
 })
@@ -212,7 +212,7 @@ cat3.products.create!({
   
   As a defense mechanism the Cliff Collard grows thick thorns.
   They rely on winds to carry their seeds away to reproduce. Once pollinated, they grow small, inedible fruits.",
-  image: open_asset('plante_12.jpg'),
+  image: open_asset('plante_12.png'),
   quantity: 23,
   price: 79.99
 })

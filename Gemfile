@@ -38,7 +38,7 @@ gem 'money-rails'
 gem 'stripe'
 
 # ImageMagick ( Make sure librairies installed )
-gem 'rmagick', '~> 5.2.0'
+gem 'rmagick', '~> 4.2.5'
 
 # Fake Data with Faker & Carrierwave
 gem 'faker'
