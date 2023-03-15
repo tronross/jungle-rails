@@ -30,6 +30,18 @@ main section.categories-show {
         border-radius: 0.25rem;
       }
 
+      .addsoldout {
+        min-width: 110px;
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: rgba(86, 192, 109, 0.571);
+        color: white;
+        border: none;
+        border-radius: 0.25em;
+        font-size: 16px
+      }
+
+
       a {
         text-decoration: none;
       }
