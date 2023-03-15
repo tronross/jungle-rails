@@ -1,6 +1,11 @@
 class CartsController < ApplicationController
 
+  before_action :show_cart, only: %i[show empty_cart]
+
   def show
+  end
+
+  def empty_cart
   end
 
   def add_item
@@ -23,6 +28,14 @@ class CartsController < ApplicationController
     cart[product_id] = (cart[product_id] || 0) + delta
     cart.delete(product_id) if cart[product_id] < 1
     update_cart cart
+  end
+
+  def show_cart
+    if enhanced_cart.length > 0
+      render "show"
+    else 
+      render "empty_cart"
+    end
   end
 
 end
