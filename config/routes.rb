@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
+  get "empty_cart", to: "carts#empty_cart"
 
   resource :cart, only: [:show] do
     post   :add_item
