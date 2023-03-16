@@ -16,7 +16,6 @@
       </thead>
       <% @order.line_items.each do |item|%>
       <tr>
-        <%# <td> line_item. </td> %>
         <td> <%= image_tag item.product.image.tiny.url %> </td>
         <td> <%= item.product.name %> </td>
         <td> <%= item.product.description %> </td>
