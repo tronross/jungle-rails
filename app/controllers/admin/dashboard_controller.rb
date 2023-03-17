@@ -7,8 +7,6 @@ class Admin::DashboardController < ApplicationController
   def initialize
     @products_total = Product.count
     @categories_total = Category.count
-    puts @products_total
-    puts @categories_total
   end
 
 end
