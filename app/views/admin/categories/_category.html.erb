@@ -1,0 +1,33 @@
+<tr>
+  <td>
+    <h2><%= category.name %></h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Products</th>
+          <th>Price</th>
+          <th>Qty Remaining</th>
+        </tr>
+      </thead>
+    <% @products.each do |product| %>
+      <% if category.name == product.category.name %>
+      <tr>
+        <td>
+          <%= image_tag product.image.tiny.url %>
+        </td>
+        <td>
+          <%= product.name %>
+        </td>
+        <td>
+           <%= humanized_money_with_symbol product.price %>
+        </td>
+        <td>
+           <%= product.quantity %>
+        </td>
+      </tr>
+
+      <% end %>
+    <% end %>
+    </table>
+  </td>
+</tr>
