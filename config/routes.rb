@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  root to: 'products#index'
+  
+  get 'about/index'
 
   get 'sessions/new'
-  get 'sessions/create'
+  post 'sessions/create'
   get 'sessions/destroy'
-  get 'about/index'
-  root to: 'products#index'
 
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
@@ -19,7 +20,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
   
-  resources :sessions, only: [:new, :create, :destroy]
+  # resources :sessions, only: [:new, :create, :destroy]
 
   namespace :admin do
     root to: 'dashboard#show'
