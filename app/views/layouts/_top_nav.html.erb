@@ -52,20 +52,20 @@
             <%= link_to 'About', '/about/index', class: "nav-link" %>
           </li>
           
-            <% if current_user %>
+          <% if current_user %>
             <li id="signedin" class="nav-link align-middle" >
               Signed in as <%= current_user.name %>
               </li>
               <li><%= link_to 'Logout', '/sessions/destroy', class: "nav-link " %>
               </li>
-            <% else %>
+          <% else %>
             <li class="nav-item align-middle" >
-              <%= link_to 'Login', '/sessions/new', class: "nav-link " %>
-              </li>
-              <li>
-              <%= link_to 'Signup', '/users/new', class: "nav-link " %>
-              </li>
-            <% end %>
+            <%= link_to 'Login', '/sessions/new', class: "nav-link " %>
+            </li>
+            <li>
+            <%= link_to 'Signup', '/users/new', class: "nav-link " %>
+            </li>
+          <% end %>
           
           <li class="nav-item end-0">
             <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
