@@ -6,14 +6,24 @@
 
 <h2>Welcome!</h2>
 <h3>Create Your Account Below:</h3> 
-
+<div class="form-group">
 <%= form_for :user, url: "/users" do |f| %>
-  <br>
-  Name: <%= f.text_field :name %><br>
-  Email: <%= f.text_field :email %><br>
-  Password: <%= f.password_field :password %><br>
-  Password Confirmation: <%= f.password_field :password_confirmation %><br>
-  <%= f.submit "Submit" %>
+ 
+    <div class="mb-1">
+      Name: <%= f.text_field :name, class: "f-field" %>
+    </div>
+    <div class="mb-1">
+      Email: <%= f.text_field :email, class: "f-field" %>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="mb-1">
+      Password: <%= f.password_field :password, class: "f-field" %>
+    </div>
+    <div class="mb-1">
+      Password Confirmation: <%= f.password_field :password_confirmation, class: "f-field" %>
+    </div>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+    </div>
 
 <% end %>
 
