@@ -1,23 +1,21 @@
 <section class="session-new">
-
   <header class="page-header">
     <h1>Login</h1>
   </header>
-
-<h3>Welcome Back!</h3>
-<br>
-<div class="form-group">
-
-<%= form_tag '/sessions/create' do %>
-<div class="mb-1">
-  User email: <%= text_field_tag :email %>
-  </div>
+  <h3>Welcome Back!</h3>
   <br>
-  <div class="mb-1">
-  Password: <%= password_field_tag :password %>
-  </div>
-  <%= submit_tag "Submit", class: "btn btn-primary" %>
+  <div class="form-group">
+  <%= form_tag '/sessions/create' do %>
 
-<% end %>
-</div>
+    <div class="mb-1">
+      User email: <%= text_field_tag :email %>
+      </div>
+      <br>
+      <div class="mb-1">
+      Password: <%= password_field_tag :password %>
+      </div>
+      <%= submit_tag "Submit", class: "btn btn-primary" %>
+    </div>
+
+  <% end %>
 </section>
