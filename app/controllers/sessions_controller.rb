@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
+      flash[:alert] = 'Invalid Login - please re-enter'
       redirect_to '/sessions/new'
     end
   end
