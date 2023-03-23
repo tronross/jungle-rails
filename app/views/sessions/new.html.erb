@@ -5,7 +5,7 @@
   <h3>Welcome Back!</h3>
   <br>
   <% if flash[:alert] %>
-    <div class="alert"><%= flash[:alert] %></div>
+  <section class= "alert alert-danger" role="alert"><%= flash[:alert] %></section>
   <% end %>
   <div class="form-group">
   <%= form_tag '/sessions/create' do %>
