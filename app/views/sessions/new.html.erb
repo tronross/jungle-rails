@@ -4,19 +4,21 @@
   </header>
   <h3>Welcome Back!</h3>
   <br>
+
   <% if flash[:alert] %>
-  <section class= "alert alert-danger" role="alert"><%= flash[:alert] %></section>
+    <section class= "alert alert-danger" role="alert"><%= flash[:alert] %></section>
   <% end %>
+
   <div class="form-group">
   <%= form_tag '/sessions/create' do %>
 
     <div class="mb-1">
       User email: <%= text_field_tag :email %>
-      </div>
-      <br>
-      <div class="mb-1">
+    </div>
+    <br>
+    <div class="mb-1">
       Password: <%= password_field_tag :password %>
-      </div>
+    </div>
       <%= submit_tag "Submit", class: "btn btn-primary" %>
     </div>
 
