@@ -5,6 +5,11 @@
   <h2>Welcome!</h2>
   <h3>Create Your Account Below:</h3> 
   <div class="form-group">
+
+    <% if flash[:alert] %>
+    <section class= "alert alert-danger" role="alert"><%= flash[:alert] %></section>
+  <% end %>
+  
     <%= form_for :user, url: "/users" do |f| %>
 
         <div class="mb-1">
