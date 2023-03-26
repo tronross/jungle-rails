@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      flash[:alert] = 'Invalid User Data - please re-enter'
+      flash[:alert] = 'Error - please re-enter User data'
       redirect_to '/users/new'
     end
   end
