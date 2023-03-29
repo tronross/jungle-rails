@@ -59,5 +59,19 @@ RSpec.describe User, type: :model do
       expect(@user2.errors.messages[:email]).to eq ["has already been taken"]
     end
   end
+  describe '.authenticate_with_credentials' do
+    it 'successfully authenticates with valid credentials' do
+      @user = User.create({
+        name: 'Damian',
+        email: 'fuzzydice@ureeka.biz',
+        password: 'Fifftieth',
+        password_confirmation: 'Fifftieth'
+      })
+     expect(User.authenticate_with_credentials('fuzzydice@ureeka.biz', 'Fifftieth')).to be_truthy
+    end
+    it 'should'
+  end
+
+ 
 
 end
