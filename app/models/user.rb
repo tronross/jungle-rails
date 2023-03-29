@@ -7,9 +7,7 @@ class User < ApplicationRecord
   validates :password, presence: true
   validates :password_confirmation, presence: true
 
+  validates :password, length: { minimum: 8 }
   validates_confirmation_of :password
 
-  # validates_uniqueness_of :email.downcase
-
- 
 end
