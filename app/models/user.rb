@@ -13,7 +13,7 @@ class User < ApplicationRecord
   # private
 
   def self.authenticate_with_credentials(email, password)
-    @user = self.find_by_email(email)
+    @user = self.find_by_email(email.strip)
     @user && @user.authenticate(password) ? @user : nil
   end
 end
