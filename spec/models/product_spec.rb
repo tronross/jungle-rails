@@ -2,6 +2,19 @@ require 'rails_helper'
 
 RSpec.describe Product, type: :model do
   describe 'Validations' do
+    it 'creates a valid Product' do
+      @category = Category.new
+      @product = Product.new({
+        name: 'Boston',
+        price: 26.99,
+        quantity: 5,
+        category: @category
+      })
+      expect(@product).to be_valid
+    end
+
+
+
     it 'saves the correct name' do
       @category = Category.new
       @product = Product.new({
