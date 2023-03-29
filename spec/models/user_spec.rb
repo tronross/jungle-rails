@@ -69,7 +69,25 @@ RSpec.describe User, type: :model do
       })
      expect(User.authenticate_with_credentials('fuzzydice@ureeka.biz', 'Fifftieth')).to be_truthy
     end
-    it 'should'
+    it 'successfully authenticates with extra spaces before and/or after email' do
+      @user = User.create({
+        name: 'Damian',
+        email: 'fuzzydice@ureeka.biz',
+        password: 'Fifftieth',
+        password_confirmation: 'Fifftieth'
+      })
+      expect(User.authenticate_with_credentials(' fuzzydice@ureeka.biz ', 'Fifftieth')).to be_truthy
+    end
+    it 'successfully authenticates with incorrect upper/lower case in email' do
+      @user = User.create({
+        name: 'Damian',
+        email: 'fuzzydice@ureeka.biz',
+        password: 'Fifftieth',
+        password_confirmation: 'Fifftieth'
+      })
+      expect(User.authenticate_with_credentials(' fuzzyDICE@ureeka.biz ', 'Fifftieth')).to be_truthy
+    end
+
   end
 
  
