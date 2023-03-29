@@ -12,6 +12,6 @@ class User < ApplicationRecord
 
   def authenticate_with_credentials(email, password)
     @user = self.find_by_email(email)
-    @user.authenticate(password)
+    @user.authenticate(password) ? @user : nil
   end
 end
