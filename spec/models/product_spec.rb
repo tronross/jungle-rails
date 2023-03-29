@@ -13,7 +13,7 @@ RSpec.describe Product, type: :model do
       expect(@product).to be_valid
     end
 
-    it 'fails with invalid name' do
+    it 'fails with an invalid name' do
       @category = Category.new
       @product = Product.new({
         name: nil,
@@ -25,7 +25,7 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.messages[:name]).to eq ["can't be blank"]
     end
 
-    it 'fails with invalid price' do
+    it 'fails with an invalid price' do
       @category = Category.new
       @product = Product.new({
         name: 'Boston',
@@ -36,7 +36,7 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.messages.include?(:price))
     end
 
-    it 'fails with invalid quantity' do
+    it 'fails with an invalid quantity' do
       @category = Category.new
       @product = Product.new({
         name: 'Boston',
@@ -48,15 +48,16 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.messages.include?(:price))
     end
 
-    it 'saves the correct category' do
+    it 'fails with an invalid category' do
       @category = Category.new
       @product = Product.new({
         name: 'Boston',
         price: 26.99,
         quantity: 5,
-        category: @category
+        category: nil
       })
-      expect(@product.category).to eq(@category)
+      expect(@product).to_not be_valid
+      expect(@product.errors.messages.include?(:category))
     end
   end
 end
