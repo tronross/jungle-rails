@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   it 'saves if all fields are valid' do
   @user = User.new({
-    name: 'Steve-o',
-    email: 'steve@steveplace.com',
-    password: 'STEEVE',
-    password_confirmation: 'STEEVE'
+    name: 'Barker',
+    email: 'bigb@hazardous.com',
+    password: 'Banananas',
+    password_confirmation: 'Banananas'
   })
   expect(@user).to be_valid
   end
@@ -16,7 +16,7 @@ RSpec.describe User, type: :model do
         name: 'Steve-o',
         email: 'steve@steveplace.com',
         password: nil,
-        password_confirmation: 'STEEVE'
+        password_confirmation: 'STEEEEVE'
       })
       expect(@user).to_not be_valid
       expect(@user.errors.messages.include?(:password))
@@ -25,11 +25,20 @@ RSpec.describe User, type: :model do
       @user = User.new({
         name: 'Steve-o',
         email: 'steve@steveplace.com',
-        password: 'STEEVE',
-        password_confirmation: 'STEEEVE'
+        password: 'STEEEEEVE',
+        password_confirmation: 'STEEEEEEEEEVE'
       })
       expect(@user).to_not be_valid
       expect(@user.errors.messages.include?(:password))
+    end
+    it 'must have a minuimum of eight characters' do
+      @user = User.new({
+        name: 'Damian',
+        email: 'fuzzydice@ureeka.biz',
+        password: 'Fif',
+        password_confirmation: 'Fif'
+      })
+      expect(@user).to_not be_valid
     end
   end
   describe 'E-mail address' do
@@ -37,17 +46,18 @@ RSpec.describe User, type: :model do
       @user = User.create({
         name: 'Steve-o',
         email: 'steve@steveplace.com',
-        password: 'STEEVE',
-        password_confirmation: 'STEEVE'
+        password: 'STEEEEEEVE',
+        password_confirmation: 'STEEEEEEVE'
       })
       @user2 = User.create({
         name: 'steve',
         email: 'steve@steveplace.com',
-        password: 'STVE',
-        password_confirmation: 'STVE'
+        password: 'STEEEEEEVE2',
+        password_confirmation: 'STEEEEEEVE2'
       })
       expect(@user2).to_not be_valid
       expect(@user2.errors.messages[:email]).to eq ["has already been taken"]
     end
   end
+
 end
