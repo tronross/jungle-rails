@@ -36,15 +36,16 @@ RSpec.describe Product, type: :model do
       expect(@product.errors.messages.include?(:price))
     end
 
-    it 'saves the correct quantity' do
+    it 'fails with invalid quantity' do
       @category = Category.new
       @product = Product.new({
         name: 'Boston',
         price: 26.99,
-        quantity: 5,
+        quantity: nil,
         category: @category
       })
-      expect(@product.quantity).to eq(5)
+      expect(@product).to_not be_valid
+      expect(@product.errors.messages.include?(:price))
     end
 
     it 'saves the correct category' do
