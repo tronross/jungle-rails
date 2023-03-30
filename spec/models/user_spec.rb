@@ -10,6 +10,7 @@ RSpec.describe User, type: :model do
   })
   expect(@user).to be_valid
   end
+
   describe 'Password' do
     it 'fails if missing password' do
       @user = User.new({
@@ -41,6 +42,7 @@ RSpec.describe User, type: :model do
       expect(@user).to_not be_valid
     end
   end
+
   describe 'E-mail address' do
     it 'must be unique' do
       @user = User.create({
@@ -59,6 +61,7 @@ RSpec.describe User, type: :model do
       expect(@user2.errors.messages[:email]).to eq ["has already been taken"]
     end
   end
+  
   describe '.authenticate_with_credentials' do
     it 'successfully authenticates with valid credentials' do
       @user = User.create({
