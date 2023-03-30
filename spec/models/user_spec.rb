@@ -87,9 +87,5 @@ RSpec.describe User, type: :model do
       })
       expect(User.authenticate_with_credentials(' fuzzyDICE@ureeka.biz ', 'Fifftieth')).to be_truthy
     end
-
   end
-
- 
-
 end
