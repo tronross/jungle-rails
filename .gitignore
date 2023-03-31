@@ -33,6 +33,9 @@ pickle-email-*.html
 !/log/.keep
 !/tmp/.keep
 
+# Ignore auto-generated product images
+/public/uploads/product/
+
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
