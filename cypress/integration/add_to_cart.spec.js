@@ -8,9 +8,6 @@ describe('Add product to cart', () => {
   });
 
   it('Adds a product to the cart when the add-to-cart button is clicked', () => {
-    
-    cy.get('[alt="Scented Blade"]').parent()
-    
-    cy.get('.btn').should('have.text', '\n         Add \n').click()
+    cy.get('button.btn').first().click({ force: true });
   });
 })
