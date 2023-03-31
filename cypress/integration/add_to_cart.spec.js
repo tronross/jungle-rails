@@ -9,5 +9,6 @@ describe('Add product to cart', () => {
 
   it('Adds a product to the cart when the add-to-cart button is clicked', () => {
     cy.get('button.btn').first().click({ force: true });
+    cy.contains('My Cart').should('contain', '1')
   });
 })
